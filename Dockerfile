@@ -9,7 +9,7 @@ RUN apk add --no-cache \
     python3 \
     python3-dev
 
-RUN python3 -m ensurepip
+RUN python3 -m ensurepip --break-system-packages
 # RUN pip3 install --upgrade pip
 
 RUN pip3 install --user -U git+https://github.com/ImAleeexx/streamlink-drm --break-system-packages
