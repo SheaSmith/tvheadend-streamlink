@@ -11,8 +11,8 @@ RUN apk add --no-cache \
 
 # RUN python3 -m ensurepip --break-system-packages
 # RUN pip3 install --upgrade pip
-
-RUN pip3 install --user -U git+https://github.com/ImAleeexx/streamlink-drm --break-system-packages
+RUN mkdir /opt/streamlink
+RUN pip3 install --user -U git+https://github.com/ImAleeexx/streamlink-drm --break-system-packages --target /opt/streamlink/
 
 ############## runtime stage ##############
 # FROM linuxserver/tvheadend:latest
