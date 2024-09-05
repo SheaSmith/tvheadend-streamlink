@@ -7,7 +7,7 @@ RUN apk add --no-cache \
     musl-dev \
     openssl-dev \
     python3 \
-    python3-dev py3-pip
+    python3-dev py3-pip git
 
 # RUN python3 -m ensurepip --break-system-packages
 # RUN pip3 install --upgrade pip
