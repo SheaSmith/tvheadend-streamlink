@@ -1,4 +1,4 @@
-FROM miogs/docker-tvheadend:latest
+FROM lscr.io/linuxserver/tvheadend:latest
 
 RUN apk add --no-cache \
     gcc \
@@ -6,13 +6,13 @@ RUN apk add --no-cache \
     linux-headers \
     musl-dev \
     openssl-dev \
-    python \
-    python2-dev
+    python3 \
+    python3-dev
 
-RUN python -m ensurepip
-RUN pip install --upgrade pip
+RUN python3 -m ensurepip
+RUN pip3 install --upgrade pip
 
-RUN pip install streamlink
+RUN pip3 install --user -U git+https://github.com/ImAleeexx/streamlink-drm
 
 ############## runtime stage ##############
 # FROM linuxserver/tvheadend:latest
